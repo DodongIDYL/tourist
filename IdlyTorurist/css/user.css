@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+}*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-y: auto;
+}
+a, ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* header */
+.header-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo-container .logoLink{
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: -2px;
+}
+
+.searchForm{
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.searchForm .field {
+    background: 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    letter-spacing: -.42px;
+    padding: 5px 72px 6px 16px;
+    width: 100%;
+    background-color: rgba(24,24,24,.06);  
+    border: none;
+    cursor: text;
+    border-radius: 5px;
+}
+
+.rightHeaderContent ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navItems .loginHeaderButton{
+    color: #444;
+}
+
+.navItems button{
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navItems .signupHeaderButton{
+    background-color: #1d8ffb;
+    color: white;
+}
+
+.navItems button span{
+    padding: 9px 12px 10px;
+}
+
+/* body */
+.grid{
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 5px 10px;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.288);
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal-box{
+    background-color: #fff;
+    height: 20vh;
+    border-radius: 10px;
+    width: 25vw;
+    margin-top: 20px;
+    padding: 20px 15px;
+}
+
+.btn-box{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 15px 20px 0 0;
+}
+
+.modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gridWrapper{
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    max-height: 100%;
+    height: 400px;
+}
+
+.gridWrapper a{
+    height: 30px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,0,0,0), rgb(141, 141, 141));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    transition: 0.6s;
+    border-radius: 10px;
+}
+
+.overlay a{
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.descrip{
+    width: 100%;
+    padding: 0 10px;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
